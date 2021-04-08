@@ -6,6 +6,7 @@ import com.epam.java.automator.walkthrought.kit.service.util.LoggerConstants;
 import com.epam.java.automator.walkthrought.kit.service.util.TimeUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,6 +19,7 @@ public class BasePageElement {
 
   protected BasePageElement() {
     this.driver = DriverSingleton.getDriver();
+    PageFactory.initElements(driver, this);
   }
 
   public String getPageTitle() {

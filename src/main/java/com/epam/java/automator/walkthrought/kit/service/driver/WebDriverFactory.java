@@ -1,5 +1,6 @@
 package com.epam.java.automator.walkthrought.kit.service.driver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import org.openqa.selenium.WebDriver;
@@ -21,10 +22,12 @@ public final class WebDriverFactory {
   }
 
   private static WebDriver createChromeDriver() {
+    WebDriverManager.chromedriver().setup();
     return new ChromeDriver();
   }
 
   private static WebDriver createFirefoxDriver() {
+    WebDriverManager.firefoxdriver().setup();
     return new FirefoxDriver();
   }
 
