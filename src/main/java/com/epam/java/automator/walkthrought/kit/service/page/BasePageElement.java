@@ -22,10 +22,6 @@ public class BasePageElement {
     PageFactory.initElements(driver, this);
   }
 
-  public String getPageTitle() {
-    return driver.getTitle();
-  }
-
   protected void click(WebElement webElement) {
     long startTime = System.currentTimeMillis();
     try {

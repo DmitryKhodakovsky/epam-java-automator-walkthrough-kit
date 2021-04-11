@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class TestContext {
 
+  public static final String COMPARED_PRODUCT_TITLES = "compared_product_titles";
+
   private static TestContext instance;
 
   private ThreadLocal<Map<String, Object>> map = ThreadLocal.withInitial(HashMap::new);
